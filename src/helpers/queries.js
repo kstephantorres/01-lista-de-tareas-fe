@@ -43,7 +43,7 @@ export const borrarTareaAPI=async(id)=>{
         console.log("🚀 ~ borrarTareaAPI ~ error:", error)
     }
 }
-
+//.map
 
 export const editarTareaAPI = async(id, itemTarea)=>{
     try {

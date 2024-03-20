@@ -6,7 +6,9 @@ const ListaTarea = ({listaTarea, borrarTarea, editarTarea}) => {
     return (
         <ListGroup>
             {
-                listaTarea.map((itemTarea) => <ItemTarea key={itemTarea._id} itemTarea={itemTarea} borrarTarea={borrarTarea} editarTarea={editarTarea}></ItemTarea>)
+                listaTarea
+                ?listaTarea.map((itemTarea) => <ItemTarea key={itemTarea._id} itemTarea={itemTarea} borrarTarea={borrarTarea} editarTarea={editarTarea}></ItemTarea>)
+                :<p>No hay tareas para mostrar</p>
             }
         </ListGroup>
     );

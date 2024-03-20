@@ -3,10 +3,12 @@ import ListaTarea from './ListaTarea'
 import { useEffect, useState, useRef } from "react";
 import { borrarTareaAPI, crearTareaAPI, leerTareasAPI, editarTareaAPI } from "../helpers/queries";
 import Swal from "sweetalert2";
+import ItemTarea from "./ItemTarea";
 
 const FormularioTarea = () => {
     const [tarea, setTarea]= useState('');
     const [listaTarea, setListaTarea] =  useState([])
+    const [busqueda, setBusqueda] = useState('');
     const taskInputRef = useRef(null)
 
     const consultarAPI = async()=>{
@@ -83,6 +85,17 @@ const FormularioTarea = () => {
         }
     };
 
+    const handleBuscar = () => {
+        const tareasFiltradas = listaTarea.filter(ItemTarea =>
+            ItemTarea.tarea.toLowerCase().includes(busqueda.toLowerCase())
+        );
+        setListaTarea(tareasFiltradas);
+    }
+
+    const mostrarTodasLasTareas=()=>{
+        consultarAPI()
+    }
+
     return (
         <section>
             <Form onSubmit={handleSubmit}>
@@ -100,6 +113,16 @@ const FormularioTarea = () => {
                     <Button variant="dark" className="ms-2" type="submit"> Agregar </Button>
                 </Form.Group> 
             </Form>
+            <Form.Group className="mb-3 d-flex" controlId="exampleForm.ControlInput2">
+                <Form.Control 
+                    type="text" 
+                    placeholder="Buscar tarea" 
+                    onChange={(e)=> setBusqueda(e.target.value)} 
+                    value={busqueda}
+                />
+                <Button variant="primary" className="ms-2" onClick={handleBuscar}><i className="bi bi-search"></i></Button>
+                <Button variant="success" onClick={mostrarTodasLasTareas} className="ms-2"><i className="bi bi-arrow-clockwise"></i></Button>
+            </Form.Group>
             <ListaTarea listaTarea={listaTarea} borrarTarea={borrarTarea} editarTarea={editarTarea}></ListaTarea>
         </section>
     );

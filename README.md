@@ -20,7 +20,7 @@ git clone https://github.com/kstephantorres/01-lista-de-tareas-fe.git
 _Instala las dependencias_
 
 ```
-01-lista-de-tareas-fe
+cd 01-lista-de-tareas-fe
 npm install
 ```
 

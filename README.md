@@ -24,8 +24,10 @@ cd 01-lista-de-tareas-fe
 npm install
 ```
 
+_Crea un archivo `.env` en el directorio raíz del proyecto y configura las variables de entorno necesarias._
+
 _Para ejecutar el proyecto en un entorno de desarrollo:_
-Crea un archivo `.env` en el directorio raíz del proyecto y configura las variables de entorno necesarias.
+  
 ```
 npm run dev
 ```

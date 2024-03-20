@@ -1,6 +1,6 @@
-# Trabajo Practico N º 1
+# Trabajo Practico - Backend
 
-_**PUNTO 5**_
+_**PUNTO 2 - Lista de Tareas (Frontend)**_
 
 ## Tecnologías Utilizadas 🛠️
 
@@ -14,24 +14,25 @@ _Asegúrate de tener [Node.js](https://nodejs.org/) instalado en tu máquina._
 
 _Clona el proyecto_
 ```
-git clone https://github.com/kstephantorres/m3-tp1-p05.git
+git clone https://github.com/kstephantorres/01-lista-de-tareas-fe.git
 ``` 
 
 _Instala las dependencias_
 
 ```
-cd m3-tp1-p05
+01-lista-de-tareas-fe
 npm install
 ```
 
 _Para ejecutar el proyecto en un entorno de desarrollo:_
+Crea un archivo `.env` en el directorio raíz del proyecto y configura las variables de entorno necesarias.
 ```
 npm run dev
 ```
 
 ## Despliegue 📦
 
-_[Deploy en Netlify](https://m3-tp1-p05.netlify.app/)_
+_[Deploy en Netlify](https://01-lista-de-tareas-fe.netlify.app/)_
 
 ## Autor ✒️
 

@@ -54,9 +54,9 @@ const FormularioTarea = () => {
               const response = await borrarTareaAPI(idTarea)
               if(response.status === 200){
                 Swal.fire({
-                    title: "¡Producto eliminado!",
+                    title: "¡Tarea eliminada!",
                     text: `La tarea fue eliminada correctamente`,
-                    icon: "success"
+                    icon: "success" 
                   });
                 consultarAPI()
               }else{

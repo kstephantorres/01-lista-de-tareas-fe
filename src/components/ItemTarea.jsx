@@ -43,6 +43,7 @@ const ItemTarea = ({itemTarea, borrarTarea, editarTarea}) => {
                         required
                         value={editedTask}
                         onChange={(e) => setEditedTask(e.target.value)}
+                        
                     />
                 </Modal.Body>
                 <Modal.Footer>

@@ -30,11 +30,12 @@ const FormularioTarea = () => {
             const response = await crearTareaAPI(tarea)
             if(response.status === 201)
             {
-                console.log("Tarea creada")
                 consultarAPI()
+                setTarea("")
             }
+                
             else{
-                console.log("No se pudo crear la tarea")
+                alert( `No se pudo crear la tarea. Error: ${response.status}` )
             }
         taskInputRef.current && taskInputRef.current.focus()
     }
@@ -78,7 +79,7 @@ const FormularioTarea = () => {
                 console.log("Tarea editada");
                 consultarAPI();
             } else {
-                console.log("No se pudo editar la tarea");
+                alert( `No se pudo crear la tarea. Error: ${response.status}` )
             }
         } catch (error) {
             console.log("Error al editar la tarea:", error);

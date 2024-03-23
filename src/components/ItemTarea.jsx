@@ -8,7 +8,6 @@ const ItemTarea = ({itemTarea, borrarTarea, editarTarea}) => {
     const [taskId, setTaskId] = useState('');
 
     const handleEditClick = (itemTarea) => {
-        console.log("🚀 ~ handleEditClick ~ itemTarea:", itemTarea)
         setTaskId(itemTarea._id);
         setEditedTask(itemTarea.tarea);
         setModalShow(true);
